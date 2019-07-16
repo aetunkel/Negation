@@ -7,6 +7,49 @@
 const coin = _.sample(["head", "tail"]); // You can determine global (random) parameters here
 // Declare your variables here
 
+shuffle = function (o) { //v1.0
+  for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+  return o;
+}
+
+var knownArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"] ;
+
+var unkArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] ;
+
+
+shuffle(unkArray);
+shuffle(knownArray);
+
+
+// known  A-H
+var imgA = knownArray.pop();
+var imgB = knownArray.pop();
+var imgC = knownArray.pop();
+var imgD = knownArray.pop();
+var imgE = knownArray.pop();
+var imgF = knownArray.pop();
+var imgG = knownArray.pop();
+var imgH = knownArray.pop();
+var imgI = knownArray.pop();
+var imgJ = knownArray.pop();
+var imgK = knownArray.pop();
+var imgL = knownArray.pop();
+
+// unk distractor 1-12
+var img1 = unkArray.pop();
+var img2 = unkArray.pop();
+var img3 = unkArray.pop();
+var img4 = unkArray.pop();
+var img5 = unkArray.pop();
+var img6 = unkArray.pop();
+var img7 = unkArray.pop();
+var img8 = unkArray.pop();
+var img9 = unkArray.pop();
+var img10 = unkArray.pop();
+var img11 = unkArray.pop();
+var img12 = unkArray.pop();
+
+
 
 
 /* Helper functions
@@ -31,7 +74,7 @@ const generateID = function(len) {
 
 
 
-/* Hooks  
+/* Hooks
 *
 *
 */
