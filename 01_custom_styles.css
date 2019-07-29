@@ -37,21 +37,16 @@
       padding: 5px;
     }
 
+  .image {
+    width: 300px;
+    height: 300px;
+    float: left;
+  }
+
   .target {
     width: 300px;
     height: 300px;
     border-style: solid;
     border-width: medium;
     border-color: blue;
-    float: left;
-  }
-
-  .distractor {
-    width: 300px;
-    height: 300px;
-    border-style: solid;
-    border-width: medium;
-    border-color: white;
-    float: left;
-    margin-left: 5px;
   }

@@ -12,42 +12,110 @@ shuffle = function (o) { //v1.0
   return o;
 }
 
-var knownArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"] ;
+// CREATE KNOWN TRIALS
 
-var unkArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] ;
+var knownArrayShuffle = [];
+
+var knownArray1 = [ "A", //0        // possible targets
+                    "B", //1
+                    "C", //2
+                    "D", //3
+                    "E", //4
+                    "F", //5
+                    "G", //6
+                    "H", //7
+                    "I", //8
+                    "J", //9
+                    "K", //10
+                    "L"] ; //11
+
+shuffle(knownArray1);
+
+for(i=0; i<knownArray1.length; i++){
+  if (i%2 === 0) {
+    knownArrayShuffle[i] = "<img src='img/" + knownArray1[i] + ".jpg' class='target'>"
+  } else {
+    knownArrayShuffle[i] = "<img src='img/" + knownArray1[i] + ".jpg' class='image'>"
+  }
+};
 
 
-shuffle(unkArray);
-shuffle(knownArray);
+// control
+var trial1 = [knownArrayShuffle[0], knownArrayShuffle[1]];
+shuffle(trial1);
+
+var trial2 = [knownArrayShuffle[2], knownArrayShuffle[3]];
+shuffle(trial2);
+
+var trial3 = [knownArrayShuffle[4], knownArrayShuffle[5]];
+shuffle(trial3);
+
+var trial4 = [knownArrayShuffle[6], knownArrayShuffle[7]];
+shuffle(trial4);
+
+// experimental
+var trial5 = [knownArrayShuffle[0], knownArrayShuffle[5]];
+shuffle(trial5);
+var trial6 = [knownArrayShuffle[0], knownArrayShuffle[7]];
+shuffle(trial6);
+var trial7 = [knownArrayShuffle[0], knownArrayShuffle[9]];
+shuffle(trial7);
+knownArrayShuffle[0] = "<img src='img/"+ knownArray1[0] + ".jpg' class='image'>";
+var trial8 = [knownArrayShuffle[6], knownArrayShuffle[0]];
+shuffle(trial8);
 
 
-// known  A-H
-var imgA = knownArray.pop();
-var imgB = knownArray.pop();
-var imgC = knownArray.pop();
-var imgD = knownArray.pop();
-var imgE = knownArray.pop();
-var imgF = knownArray.pop();
-var imgG = knownArray.pop();
-var imgH = knownArray.pop();
-var imgI = knownArray.pop();
-var imgJ = knownArray.pop();
-var imgK = knownArray.pop();
-var imgL = knownArray.pop();
+// CREATE UNKNOWN TRIALS
 
-// unk distractor 1-12
-var img1 = unkArray.pop();
-var img2 = unkArray.pop();
-var img3 = unkArray.pop();
-var img4 = unkArray.pop();
-var img5 = unkArray.pop();
-var img6 = unkArray.pop();
-var img7 = unkArray.pop();
-var img8 = unkArray.pop();
-var img9 = unkArray.pop();
-var img10 = unkArray.pop();
-var img11 = unkArray.pop();
-var img12 = unkArray.pop();
+var unkArrayShuffle = [];
+
+var unkArray1 = [ "1",        // possible targets
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12"] ;
+
+shuffle(unkArray1);
+
+
+for(i=0; i<unkArray1.length; i++){
+  if (i%2 === 0) {
+    unkArrayShuffle[i] = "<img src='img/" + unkArray1[i] + ".jpg' class='target'>"
+  } else {
+    unkArrayShuffle[i] = "<img src='img/" + unkArray1[i] + ".jpg' class='image'>"
+  }
+};
+
+
+// control
+var trial9 = [unkArrayShuffle[0], unkArrayShuffle[1]];
+shuffle(trial9);
+var trial10 = [unkArrayShuffle[2], unkArrayShuffle[3]];
+shuffle(trial10);
+var trial11 = [unkArrayShuffle[4], unkArrayShuffle[5]];
+shuffle(trial11);
+var trial12 = [unkArrayShuffle[6], unkArrayShuffle[7]];
+shuffle(trial12);
+
+// experimental
+var trial13 = [unkArrayShuffle[0], unkArrayShuffle[5]];
+shuffle(trial13)
+var trial14 = [unkArrayShuffle[0], unkArrayShuffle[7]]
+shuffle(trial14)
+var trial15 = [unkArrayShuffle[0], unkArrayShuffle[9]]
+shuffle(trial15)
+unkArrayShuffle[0] = "<img src='img/"+ unkArray1[0] + ".jpg' class='image'>";
+var trial16 = [unkArrayShuffle[6], unkArrayShuffle[0]];
+shuffle(trial16);
+
+
 
 
 
