@@ -171,7 +171,7 @@ const trial = babeViews.view_generator("textbox_input", {
     // hook: {
     //     after_response_enabled: check_response
     // }
-})
+});
 
 // There are many more templates available:
 // forced_choice, slider_rating, dropdown_choice, testbox_input, rating_scale, image_selection, sentence_choice,
